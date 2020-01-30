@@ -27,7 +27,7 @@
         <groupId>com.heroku.sdk</groupId>
         <artifactId>heroku-maven-plugin</artifactId>
            <configuration>
-             <appName>onlineexam1830</appName>
+             <appName>examonline1830</appName>
            </configuration>
         <version>2.0.16</version>
       </plugin>
