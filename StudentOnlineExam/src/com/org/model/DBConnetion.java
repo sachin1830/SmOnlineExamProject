@@ -8,13 +8,12 @@ public class DBConnetion {
 
 	public static Connection createConnection() throws Exception
 	   {
-		 Connection con=null;    
-		     URI jdbUri = new URI(System.getenv("JAWSDB_URL"));
-		    String username = jdbUri.getUserInfo().split(":")[0];
-		    String password = jdbUri.getUserInfo().split(":")[1];
-		    String port = String.valueOf(jdbUri.getPort());
-		    String jdbUrl = "jdbc:mysql://" + jdbUri.getHost() + ":" + port + jdbUri.getPath();
-		    con = DriverManager.getConnection(jdbUrl, username, password);
+		Connection con=null;    
+		   String url = "jdbc:mysql://us-cdbr-iron-east-04.cleardb.net/heroku_a8a67f15c51319d";
+		   String username = "bbb53bdfeab956";
+		   String password = "c97e6390";
+		   Class.forName("com.mysql.cj.jdbc.Driver");
+		   con = DriverManager.getConnection(url, username, password);
 		   return con;
 	   }
 
